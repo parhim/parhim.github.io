@@ -82,6 +82,31 @@
 			}
 			
 		})
+		$('.sam-text a').on('click', function(event) {
+			event.preventDefault();
+			var $this = $(this),
+				data = $this.data('tab'),
+				pie = $this.data('pie');
+
+			// add/remove active class
+			$('.sam-tab-menu li').removeClass('active');
+			$this.closest('li').addClass('active');
+
+			$('.sam-tab-content.active').addClass('animated fadeOutDown');
+
+			setTimeout(function(){
+				$('.sam-tab-content.active').removeClass('active animated fadeOutDown fadeInUp');
+				$('.sam-tab-content[data-content="'+data+'"]').addClass('animated fadeInUp active');
+				getHeight();
+			}, 500);
+
+			if ( pie === 'yes' ) {
+				setTimeout(function(){
+					pieChart();
+				}, 800);
+			}
+			
+		})
 	};
 
 	// Document on load.
