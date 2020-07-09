@@ -147,6 +147,10 @@ h1, h2, h3, h4, h5, h6 {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+.project-title{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
 @media screen and (max-width: 768px) {
   .sam-tab-wrap .sam-tab-menu li a .menu-text {
     display: none;
@@ -406,6 +410,9 @@ figure {
 }
 #sam-footer .sam-author {
   display: block;
+}
+.primary{
+  color: #e79e17;
 }
 @media screen and (max-width: 768px) {
   #sam-footer .sam-author {

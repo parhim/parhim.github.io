@@ -52,7 +52,7 @@
 
 </head>
 
-<body style="background-image: url(images/dark-triangles.png);">
+<body id="bg" style="background-image: url(images/dark-triangles.png);">
 
 	<div id="sam-main">
 		<div class="sam-tab-wrap">
@@ -75,7 +75,7 @@
 							<figure>
 								<img src="images/me1.png" class="round" alt="">
 							</figure>
-							<h1>Sam Parhimchik</h1>
+							<h1 class="project-title">Sam Parhimchik</h1>
 							<p>I am a self-motivated, sociable and fast-learning <strong href="#">Full-Stack Developer</strong>
 								based in <strong href="#">San Francisco, CA</strong>.
 								I've recently gotten a Bachelor of Science in Computer Science from
@@ -108,14 +108,14 @@
 				<div class="sam-content-inner">
 					<div class="row">
 						<div class="col-md-12">
-							<p>My Education</p>
+							<h5><i style="color: rgb(224, 153, 0);">My education:</i></h5>
 
 							<div class="sam-feature">
 								<div class="sam-icon">
 									<i class="icon-graduation-cap"></i>
 								</div>
 								<div class="sam-text">
-									<span><strong>The University of British Columbia.</strong></span>
+									<span><strong>The University of British Columbia</strong></span>
 									<h2>2015-2020</h2>
 									<small style="font-size: 0.7em ;">Bachelor of Science in Computer Science</small>
 									<div></div>
@@ -135,7 +135,7 @@
 					<div class="row">
 						<div class="col-md-12">
 
-							<p>I've worked for the following companies:</p>
+							<h5><i style="color: rgb(224, 153, 0);">I've worked for the following companies:</i></h5>
 							<div class="sam-feature">
 								<div class="sam-icon">
 									<i class="icon-black-tie"></i>
@@ -143,7 +143,8 @@
 								<div class="sam-text">
 									<h3><a href=""> WizeHire</a> &nbsp;<small style="font-size: 0.6em;"> San Francisco,
 											CA</small></h3>
-									<h3>May 2020 - Now</h3>
+									<h3>Software Engineer (Summer Internship)</h3>
+									<h6><i class="primary">May 2020 - Now</i></h6>
 									<p>
 										<ul style="font-size: 0.8em;">
 											<li>Developed multiple features, with UI design, that sped up both the
@@ -166,9 +167,12 @@
 									<i class="icon-black-tie"></i>
 								</div>
 								<div class="sam-text">
-									<h3><a href=""> Philips</a> &nbsp;<small style="font-size: 0.6em;"> Vancouver,
-											BC</small></h3>
-									<h3>May 2019 - May 2020</h3>
+									<h3>
+										<a href=""> Philips</a> &nbsp;
+										<small style="font-size: 0.6em;"> Vancouver, BC</small>
+									</h3>
+									<h3>Software Developer (Co-op)</h3>
+									<h6><i class="primary">May 2019 - May 2020</i></h6>
 									<p>
 										<ul style="font-size: 0.8em;">
 											<li>Integrated third-party devices into a distributed smart senior home
@@ -190,7 +194,8 @@
 								<div class="sam-text">
 									<h3><a href="">Terramera</a> &nbsp;<small style="font-size: 0.6em;"> Vancouver,
 											BC</small></h3>
-									<h3>Sep 2017 - Aug 2018</h3>
+											<h3>Software Engineer (Co-op)</h3>
+											<h6><i class="primary">Sep 2017 - Aug 2018</i></h6>
 									<p>
 										<ul style="font-size: 0.8em;">
 											<li>Developed a cron-activated Java script that runs on roaming Docker
@@ -214,7 +219,8 @@
 								<div class="sam-text">
 									<h3><a href="">IBA Group</a> &nbsp;<small style="font-size: 0.6em;"> Minsk,
 											Belarus</small></h3>
-									<h3>Jul 2016 - Aug 2016</h3>
+											<h3>Java Developer (Summer Internship)</h3>
+											<h6><i class="primary">Jul 2016 - Aug 2016</i></h6>
 									<p>
 										<ul style="font-size: 0.8em;">
 											<li>Developed an Android app [Java, Maven, Android Studio]
@@ -284,17 +290,18 @@
 				<div class="sam-content-inner">
 					<div class="row">
 						<div class="sam-text">
-							<h5>Here are some things I've worked on this Summer:</h5>
+							<h5><i style="color: rgb(224, 153, 0);">Here are some things I did this Summer:</i></h5>
 
 							<div class="sam-feature">
 								<div class="">
-									<h3>Job template duplication ability</h3>
+									<h3 class="project-title">Job template duplication ability</h3>
 									<p>
 										<ul style="font-size: 0.8em;">
-											<li>Problem : WizeHire customer support team had no way of duplicating an existing job
+											<li><strong>Problem: </strong> <br>
+												WizeHire customer support team had no way of duplicating an existing job
 												posting template, to make a similar one. They had to manually copy
 												each qualification and description into an empty template</li>
-											<li>Solution : <br>
+											<li><strong>Solution: </strong><br>
 
 												<ul>
 													<li>Wrote a new Django endpoint that would replicate the structure
@@ -308,7 +315,7 @@
 											<br>
 											<br>
 											<li>
-												Value:
+												<strong>Value:</strong>
 													<ul>
 														<li>Made it possible for customer support to seamlessly duplicate templates</li>
 														
@@ -329,16 +336,16 @@
 
 							<div class="sam-feature">
 								<div class="">
-									<h3>TSV data import support</h3>
+									<h3 class="project-title">TSV data import support</h3>
 									<p>
 										<ul style="font-size: 0.8em;">
 											<li>
-												<p>Problem: <br> WizeHire customer support team must be able to import
+												<p><strong>Problem: </strong><br> WizeHire customer support team must be able to import
 													job candidates from a variety of different sources. The format
 													of the import data changes frequently, but the if data pipeline
 													stops flowing, they cannot onboard new customers.</p>
 											</li>
-											<li>Solution: <br> Developed a file parser that would handle changes to the
+											<li> <strong> Solution:</strong> <br> Developed a file parser that would handle changes to the
 												format, leaving the workflow uninterrupted.
 												<ul>
 													<li>Built a TSV parser in PHP, utilizing regex for faster
@@ -352,7 +359,7 @@
 											</li>
 											<br>
 											<li>
-												Value:
+												<strong>Value:</strong>
 													<ul>
 														<li>Made it possible for customer support to import cadidates in
 															bulk, saving hours of manual work</li>
@@ -362,7 +369,7 @@
 												
 											</li>
 											<br>
-											<li>Tech to make it happen :
+											<li><strong>Tech to make it happen:</strong>
 												<ul>
 													<li>PHP string parsing</li>
 													<li>Modulo-based arbitrary column data extraction</li>

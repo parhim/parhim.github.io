@@ -107,7 +107,17 @@
 			}
 			
 		})
+
+		document.addEventListener('keyup', (e) => {
+			if (e.code === "KeyE") {
+				document.getElementById('bg').style = "background-image: url(images/gig.gif);"
+			} else {
+				document.getElementById('bg').style = "background-image: url(images/dark-triangles.png);"				
+			}
+		
+		});
 	};
+
 
 	// Document on load.
 	$(function(){
