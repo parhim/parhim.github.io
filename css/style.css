@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 600px;
   margin: 5em auto 5em auto;
   position: relative;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(17, 17, 17, 0.97);
   overflow: hidden;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
@@ -395,7 +395,7 @@ figure {
 
 #sam-footer {
   margin-top: 50px;
-  background: black;
+  background: rgb(14, 14, 14);
   clear: both;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
@@ -457,7 +457,7 @@ figure {
   }
 }
 .round{
-  border-radius: 100%;
+  border-radius: 24%;
   width: 9em;
   border: 9px solid #e79e17;
 }

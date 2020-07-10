@@ -110,7 +110,7 @@
 
 		document.addEventListener('keyup', (e) => {
 			if (e.code === "KeyE") {
-				document.getElementById('bg').style = "background-image: url(images/gig.gif);"
+				document.getElementById('bg').style = "background-image: url(images/vibes.gif);"
 			} else {
 				document.getElementById('bg').style = "background-image: url(images/dark-triangles.png);"				
 			}
