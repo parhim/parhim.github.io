@@ -73,15 +73,18 @@
 					<div class="row row-bottom-padded-sm">
 						<div class="col-md-12">
 							<figure>
-								<img src="images/me1.png" class="round" alt="">
+								<img src="images/me.png" class="round" alt="">
 							</figure>
 							<h1 class="project-title">Sam Parhimchik</h1>
-							<p>I am a self-motivated, sociable and fast-learning <strong href="#">Full-Stack Developer</strong>
+							<p>I am a self-motivated, sociable and fast-learning <strong href="#">Full-Stack
+									Developer</strong>
 								based in <strong href="#">San Francisco, CA</strong>.
 								I've recently gotten a Bachelor of Science in Computer Science from
-								<a href="https://ubc.ca" target="_blank"> <strong> The University of British Columbia</strong></a>.
+								<a href="https://ubc.ca" target="_blank"> <strong> The University of British
+										Columbia</strong></a>.
 							</p>
-							I have over <strong href="#">2</strong> years of professional experience in developing</strong>
+							I have over <strong href="#">2</strong> years of professional experience in
+							developing</strong>
 							<strong href="#">Distributed Systems</strong> and <strong href="#">Dashboards</strong>.
 							<p>
 
@@ -194,8 +197,8 @@
 								<div class="sam-text">
 									<h3><a href="">Terramera</a> &nbsp;<small style="font-size: 0.6em;"> Vancouver,
 											BC</small></h3>
-											<h3>Software Engineer (Co-op)</h3>
-											<h6><i class="primary">Sep 2017 - Aug 2018</i></h6>
+									<h3>Software Engineer (Co-op)</h3>
+									<h6><i class="primary">Sep 2017 - Aug 2018</i></h6>
 									<p>
 										<ul style="font-size: 0.8em;">
 											<li>Developed a cron-activated Java script that runs on roaming Docker
@@ -219,8 +222,8 @@
 								<div class="sam-text">
 									<h3><a href="">IBA Group</a> &nbsp;<small style="font-size: 0.6em;"> Minsk,
 											Belarus</small></h3>
-											<h3>Java Developer (Summer Internship)</h3>
-											<h6><i class="primary">Jul 2016 - Aug 2016</i></h6>
+									<h3>Java Developer (Summer Internship)</h3>
+									<h6><i class="primary">Jul 2016 - Aug 2016</i></h6>
 									<p>
 										<ul style="font-size: 0.8em;">
 											<li>Developed an Android app [Java, Maven, Android Studio]
@@ -297,38 +300,89 @@
 									<h3 class="project-title">Job template duplication ability</h3>
 									<p>
 										<ul style="font-size: 0.8em;">
+											<li>
+												<strong>Value:</strong>
+												<ul>
+													<li>Made it possible for customer support to seamlessly duplicate
+														templates saving hours of daily work</li>
+													<li>Deeplinking made it easier for customer support to share templates saving even more time</li>
+												</ul>
+
+											</li>
+											<br>
 											<li><strong>Problem: </strong> <br>
 												WizeHire customer support team had no way of duplicating an existing job
 												posting template, to make a similar one. They had to manually copy
-												each qualification and description into an empty template</li>
+												each qualification and description into an empty template
+											</li>
+											<br>
 											<li><strong>Solution: </strong><br>
 
 												<ul>
-													<li>Wrote a new Django endpoint that would replicate the structure
-														of a template while reusing existing template features (qualifications, descriptions, ...) to significantly reduce DB growth</li>
-													<li>Added deep-linking support for those viewing/editing the job templates using React-Router</li>
+													<li>Wrote a new Django REST Api that would replicate the structure
+														of a template, while reusing existing template features
+														(qualifications, descriptions, ...) to significantly reduce DB
+														growth</li>
+													<li>Added deep-linking support for those viewing/editing the job
+														templates using React-Router</li>
 
 												</ul>
 											</li>
 											<br>
-											<img src="images/template-dup.gif" alt="template duplication" style="width: 100%;">
+											<img src="images/template-dup.gif" alt="template duplication"
+												style="width: 100%;">
+
 											<br>
+
 											<br>
+											<li><strong>Tech to make it happen:</strong>
+												<ul>
+													<li>Django REST Apis</li>
+													<li>React with material UI</li>
+												</ul>
+											</li>
+										</ul>
+									</p>
+								</div>
+							</div>
+
+							<div class="sam-feature">
+								<div class="">
+									<h3 class="project-title">Automated dev environment VM setup script</h3>
+									<p>
+										<ul style="font-size: 0.8em;">
 											<li>
 												<strong>Value:</strong>
-													<ul>
-														<li>Made it possible for customer support to seamlessly duplicate templates</li>
-														
-													</ul>
-												
+												<ul>
+													<li>Allowed onboarding setup for new hires to take a couple minutes with one click instead of a week</li>
+													<li>Enabled creating identical cloud instances for dependency consistency across the whole team and the production servers</li>
+												</ul>
+
 											</li>
 											<br>
-											<!-- <li>Tech to make it happen :
+											<li>
+												<p><strong>Problem: </strong><br> It would generally take around a week for a new hire
+													 to get the development environemnt up and running. Due to the distributed, multi-lingual nature of the system,
+													 and the amount of controlled dependencies, figuring out what went wrong with some step took valuable time away from engineers.
+													 with many specific dependencies</p>
+											</li>
+											<li> <strong> Solution:</strong> <br> 
+												Built a Django REST Api that spins up a templated Google Cloud compute instance, along with a front end that makes it possible in one click.
 												<ul>
-													<li>Djan</li>
-													<li>Modulo-based arbitrary column data extraction</li>
+													<li>Wrote a complex environment setup bash script that works consistently by relying on identical VM instances</li>
+													<li>The Django endpoint pipes clients ip data into the template settings making the firewall setup fully automated</li>
+													<li>Serves SQL dump files for the VMs using nginx</li>
 												</ul>
-											</li> -->
+											</li>
+											<br>
+											<li><strong>Tech to make it happen:</strong>
+												<ul>
+													<li>Django</li>
+													<li>Bash</li>
+													<li>nginx</li>
+													<li>gcloud cli</li>
+												</ul>
+											</li>
 										</ul>
 									</p>
 								</div>
@@ -340,12 +394,25 @@
 									<p>
 										<ul style="font-size: 0.8em;">
 											<li>
-												<p><strong>Problem: </strong><br> WizeHire customer support team must be able to import
+												<strong>Value:</strong>
+												<ul>
+													<li>Made it possible for customer support to import cadidates in
+														bulk, saving hours of manual work</li>
+													<li>Eliminated the need to change the code every time a small
+														format change occurs</li>
+												</ul>
+
+											</li>
+											<br>
+											<li>
+												<p><strong>Problem: </strong><br> WizeHire customer support team must be
+													able to import
 													job candidates from a variety of different sources. The format
 													of the import data changes frequently, but the if data pipeline
 													stops flowing, they cannot onboard new customers.</p>
 											</li>
-											<li> <strong> Solution:</strong> <br> Developed a file parser that would handle changes to the
+											<li> <strong> Solution:</strong> <br> Developed a file parser that would
+												handle changes to the
 												format, leaving the workflow uninterrupted.
 												<ul>
 													<li>Built a TSV parser in PHP, utilizing regex for faster
@@ -358,17 +425,6 @@
 												</ul>
 											</li>
 											<br>
-											<li>
-												<strong>Value:</strong>
-													<ul>
-														<li>Made it possible for customer support to import cadidates in
-															bulk, saving hours of manual work</li>
-														<li>Eliminated the need to change the code every time a small
-															format change occurs</li>
-													</ul>
-												
-											</li>
-											<br>
 											<li><strong>Tech to make it happen:</strong>
 												<ul>
 													<li>PHP string parsing</li>
@@ -379,6 +435,53 @@
 									</p>
 								</div>
 							</div>
+
+							<div class="sam-feature">
+								<div class="">
+									<h3 class="project-title">Porting a functional component from legacy system</h3>
+									<p>
+										<ul style="font-size: 0.8em;">
+											<li>
+												<strong>Value:</strong>
+												<ul>
+													<li>Reduced the complexity of the product enabling the removal of the legacy system</li>
+													<li>Eliminated the need for customers to switch between the new and legacy dashboards improving UX</li>
+												</ul>
+
+											</li>
+											<br>
+											<li><strong>Problem: </strong> <br>
+												WizeHire uses a legacy PHP system for some of the features. In this case, customers would have to switch to the legacy dashboard to invite candidates.  Maintaining it adds unneccessary complexity to the overall product, requiring more engineering training.
+											</li>
+											<br>
+											<li><strong>Solution: </strong><br>
+
+												<ul>
+													<li>Wrote a new Django REST Api to add the missing workflow</li>
+													<li>Built a React component with error handling and form data validation</li>
+
+												</ul>
+											</li>
+											<br>
+											<img src="images/invite.gif" alt="invitation"
+												style="width: 100%;">
+
+											<br>
+
+											<br>
+											<li><strong>Tech to make it happen:</strong>
+												<ul>
+													<li>Django REST Apis</li>
+													<li>React with material UI</li>
+													<li>PHP routing</li>
+												</ul>
+											</li>
+										</ul>
+									</p>
+								</div>
+							</div>
+
+							
 
 							<!-- <div class="">
 								<h3>Day to Day software engineering</h3>
@@ -400,7 +503,7 @@
 									</ul>
 								</p>
 							</div> -->
-						
+
 
 						</div>
 					</div>
