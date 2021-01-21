@@ -83,6 +83,7 @@
 			
 		})
 		$('.sam-text a').on('click', function(event) {
+			if (event.currentTarget.href.includes('http')) return
 			event.preventDefault();
 			var $this = $(this),
 				data = $this.data('tab'),
@@ -108,14 +109,14 @@
 			
 		})
 
-		document.addEventListener('keyup', (e) => {
-			if (e.code === "KeyE") {
-				document.getElementById('bg').style = "background-image: url(images/vibes.gif);"
-			} else {
-				document.getElementById('bg').style = "background-image: url(images/dark-triangles.png);"				
-			}
+		// document.addEventListener('keyup', (e) => {
+		// 	if (e.code === "KeyE") {
+		// 		document.getElementById('bg').style = "background-image: url(images/vibes.gif);"
+		// 	} else {
+		// 		document.getElementById('bg').style = "background-image: url(images/dark-triangles.png);"				
+		// 	}
 		
-		});
+		// });
 	};
 
 
