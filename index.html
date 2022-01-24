@@ -78,13 +78,14 @@
 							<p>I am a self-motivated, sociable and fast-learning <strong href="#">Full-Stack
 									Developer</strong>
 								based in <strong href="#">San Francisco, CA</strong>.
-								I've recently gotten a Bachelor of Science in Computer Science from
-								<a href="https://ubc.ca" target="_blank"> <strong> The University of British
-										Columbia</strong></a>.
-							</p>
-							I have over <strong href="#">3</strong> years of professional experience in
+								I have over <strong id="experience-years" href="#"></strong> years of professional experience in
 							developing</strong>
 							<strong href="#">Distributed Systems</strong> and <strong href="#">Dashboards</strong>.
+							
+							</p>
+							Bachelor of Science in Computer Science from
+								<a href="https://ubc.ca" target="_blank"> <strong> The University of British
+										Columbia</strong></a>.
 							<p>
 
 							</p>
@@ -150,12 +151,13 @@
 									<p>
 										<ul style="font-size: 0.8em;">
 											<li>SaaS platform for construction contractors to track labour hours,
-												forecast projects, and reduce costs</li>
+												forecast projects, share data and build automated workflows, reducing overhead costs</li>
 											<li>Built components for managing timecards and dynamically calculating
 												OT/pay <b>[React, Redux, Node.js (Hapi), mysql, AWS, socket.io]</b></li>
 											<li>Designed and implemented an end-to-end system for submission and
 												multi-stage approval of timecards as well as budget/payroll analysis
 												(core features)</li>
+											<li>Designed and developed multiple core features for the <b>React Native</b> mobile app (dynamic forms, guide, document center)</li>
 										</ul>
 										<br>
 										<h6>For more details check out the <a href="#" data-tab="5">Projects</a> tab
@@ -692,7 +694,7 @@
 		<footer id="sam-footer">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 text-center">
-					Sam Parhimchik 2020
+					Sam Parhimchik <p id="date"></p>
 				</div>
 			</div>
 		</footer>
@@ -710,6 +712,13 @@
 	<script src="js/jquery.easypiechart.min.js"></script>
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
+	<script>
+		let n = new Date();
+		let y = n.getFullYear();
+		document.getElementById("date").innerHTML = y;
+		let exp = y - 2018;
+		document.getElementById("experience-years").innerHTML = exp;
+	</script>
 
 </body>
 
