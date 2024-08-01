@@ -1,131 +1,139 @@
-;(function () {
-	
-	'use strict';
+(function () {
+  "use strict";
 
+  var isMobile = {
+    Android: function () {
+      return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+      return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+      return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+      return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+      return (
+        isMobile.Android() ||
+        isMobile.BlackBerry() ||
+        isMobile.iOS() ||
+        isMobile.Opera() ||
+        isMobile.Windows()
+      );
+    },
+  };
 
+  var getHeight = function () {
+    var extraHeight = 0;
 
-	var isMobile = {
-		Android: function() {
-			return navigator.userAgent.match(/Android/i);
-		},
-			BlackBerry: function() {
-			return navigator.userAgent.match(/BlackBerry/i);
-		},
-			iOS: function() {
-			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-		},
-			Opera: function() {
-			return navigator.userAgent.match(/Opera Mini/i);
-		},
-			Windows: function() {
-			return navigator.userAgent.match(/IEMobile/i);
-		},
-			any: function() {
-			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-		}
-	};
+    if (isMobile.any()) extraHeight = 50;
 
-	var getHeight = function() {
-		var extraHeight = 0;
+    setTimeout(function () {
+      $("#sam-main")
+        .stop()
+        .animate({
+          height: $(".sam-tab-content.active").height() + extraHeight,
+        });
+    }, 200);
+  };
 
-		if ( isMobile.any() ) extraHeight = 50;
-		
-		setTimeout(function(){
-			$('#sam-main').stop().animate({
-				'height': $('.sam-tab-content.active').height() + extraHeight
-			});
-		}, 200);
-	};
+  var pieChart = function () {
+    $(".chart").easyPieChart({
+      scaleColor: false,
+      lineWidth: 10,
+      lineCap: "butt",
+      barColor: "#17e7a4",
+      trackColor: "#000000",
+      size: 160,
+      animate: 1000,
+    });
+  };
 
-	var pieChart = function() {
-		$('.chart').easyPieChart({
-			scaleColor: false,
-			lineWidth: 10,
-			lineCap: 'butt',
-			barColor: '#17e7a4',
-			trackColor:	"#000000",
-			size: 160,
-			animate: 1000
-		});
-	};
+  var tabContainer = function () {
+    getHeight();
+    $(window).resize(function () {
+      getHeight();
+    });
+  };
 
-	var tabContainer = function() {
-		getHeight();
-		$(window).resize(function(){
-			getHeight();
-		})
-	};
+  var tabClickTrigger = function () {
+    $(".sam-tab-menu a").on("click", function (event) {
+      event.preventDefault();
+      var $this = $(this),
+        data = $this.data("tab"),
+        pie = $this.data("pie");
 
-	var tabClickTrigger = function() {
-		$('.sam-tab-menu a').on('click', function(event) {
-			event.preventDefault();
-			var $this = $(this),
-				data = $this.data('tab'),
-				pie = $this.data('pie');
+      // add/remove active class
+      $(".sam-tab-menu li").removeClass("active");
+      $this.closest("li").addClass("active");
 
-			// add/remove active class
-			$('.sam-tab-menu li').removeClass('active');
-			$this.closest('li').addClass('active');
+      $(".sam-tab-content.active").addClass("animated fadeOutDown");
 
-			$('.sam-tab-content.active').addClass('animated fadeOutDown');
+      setTimeout(function () {
+        $(".sam-tab-content.active").removeClass(
+          "active animated fadeOutDown fadeInUp"
+        );
+        $('.sam-tab-content[data-content="' + data + '"]').addClass(
+          "animated fadeInUp active"
+        );
+        getHeight();
+      }, 500);
 
-			setTimeout(function(){
-				$('.sam-tab-content.active').removeClass('active animated fadeOutDown fadeInUp');
-				$('.sam-tab-content[data-content="'+data+'"]').addClass('animated fadeInUp active');
-				getHeight();
-			}, 500);
+      if (pie === "yes") {
+        setTimeout(function () {
+          pieChart();
+        }, 800);
+      }
+    });
+    $(".sam-text a").on("click", function (event) {
+      if (event.currentTarget.href.includes("http")) return;
+      event.preventDefault();
+      var $this = $(this),
+        data = $this.data("tab"),
+        pie = $this.data("pie");
 
-			if ( pie === 'yes' ) {
-				setTimeout(function(){
-					pieChart();
-				}, 800);
-			}
-			
-		})
-		$('.sam-text a').on('click', function(event) {
-			if (event.currentTarget.href.includes('http')) return
-			event.preventDefault();
-			var $this = $(this),
-				data = $this.data('tab'),
-				pie = $this.data('pie');
+      // add/remove active class
+      $(".sam-tab-menu li").removeClass("active");
+      $this.closest("li").addClass("active");
 
-			// add/remove active class
-			$('.sam-tab-menu li').removeClass('active');
-			$this.closest('li').addClass('active');
+      $(".sam-tab-content.active").addClass("animated fadeOutDown");
 
-			$('.sam-tab-content.active').addClass('animated fadeOutDown');
+      setTimeout(function () {
+        $(".sam-tab-content.active").removeClass(
+          "active animated fadeOutDown fadeInUp"
+        );
+        $('.sam-tab-content[data-content="' + data + '"]').addClass(
+          "animated fadeInUp active"
+        );
+        getHeight();
+      }, 500);
 
-			setTimeout(function(){
-				$('.sam-tab-content.active').removeClass('active animated fadeOutDown fadeInUp');
-				$('.sam-tab-content[data-content="'+data+'"]').addClass('animated fadeInUp active');
-				getHeight();
-			}, 500);
+      if (pie === "yes") {
+        setTimeout(function () {
+          pieChart();
+        }, 800);
+      }
+    });
 
-			if ( pie === 'yes' ) {
-				setTimeout(function(){
-					pieChart();
-				}, 800);
-			}
-			
-		})
+    // document.addEventListener("keyup", (e) => {
+    //   if (e.code === "KeyE") {
+    //     document.getElementById("bg").style =
+    //       "background-image: url(images/vibes.gif);";
+    //   } else {
+    //     document.getElementById("bg").style =
+    //       "background-image: url(images/dark-triangles.png);";
+    //   }
+    // });
+  };
 
-		// document.addEventListener('keyup', (e) => {
-		// 	if (e.code === "KeyE") {
-		// 		document.getElementById('bg').style = "background-image: url(images/vibes.gif);"
-		// 	} else {
-		// 		document.getElementById('bg').style = "background-image: url(images/dark-triangles.png);"				
-		// 	}
-		
-		// });
-	};
-
-
-	// Document on load.
-	$(function(){
-		tabContainer();
-		tabClickTrigger();
-
-	});
-
-
-}());
+  // Document on load.
+  $(function () {
+    tabContainer();
+    tabClickTrigger();
+  });
+})();
