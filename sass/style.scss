@@ -155,14 +155,13 @@ h6 {
 #sam-main {
   max-width: 760px;
   min-height: 600px;
-  margin: 5em auto 5em auto;
   position: relative;
   background: rgba(0, 0, 0, 0.85);
   overflow: hidden;
   @include border-radius(7px);
   @include transition(0.5s);
   @media screen and (max-width: $screen-sm) {
-    margin: 2em 0.5em 5em 0.5em;
+    margin: 0.2em 0.5em 0.2em 0.5em;
   }
 }
 
@@ -264,8 +263,8 @@ h6 {
     visibility: hidden;
     width: 100%;
     @media screen and (max-width: $screen-sm) {
-      padding-left: 0.5em;
-      padding-right: 0.5em;
+      padding-left: 0em;
+      padding-right: 0em;
     }
     &.active {
       opacity: 1;
@@ -277,7 +276,7 @@ h6 {
       width: 100%;
       position: relative;
       @media screen and (max-width: $screen-sm) {
-        padding: 4em 0.5em 5em 0.5em;
+        padding: 0em;
       }
     }
   }
