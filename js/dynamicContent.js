@@ -41,6 +41,20 @@ const populateProjects = () => {
     div.innerHTML = `
             <div class="">
                 <h3 class="project-title">${project.title}</h3>
+                  ${
+                    project.image &&
+                    ` 
+                    ${
+                      project.link &&
+                      ` <a href="${project.link}" target="_blank" rel="noopener noreferrer">`
+                    }
+                        <img src="${project.image}" alt="${
+                      project.title
+                    }" class="preview">
+                    ${project.link && " </a>"}   <br/> <br/>
+                    `
+                  }
+                   
                 <p>
                 <strong>Problem:
                 <br/>
@@ -62,21 +76,8 @@ const populateProjects = () => {
                               .map((val) => `<li>${val}</li>`)
                               .join("")}
                         </ul>
-                    <br>
-                  ${
-                    project.image &&
-                    ` 
-                    ${
-                      project.link &&
-                      ` <a href="${project.link}" target="_blank" rel="noopener noreferrer">`
-                    }
-                        <img src="${project.image}" alt="${
-                      project.title
-                    }" class="preview">
-                    ${project.link && " </a>"}
-                    `
-                  }
-                    <br>
+                    <br/>
+                
                     <br/>
 <strong>Tech to make it happen:</strong>
                         <ul>
