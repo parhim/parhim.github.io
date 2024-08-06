@@ -4,13 +4,13 @@ const workExperience = [
     location: "Los Angeles, CA",
     logosrc: "./images/logos/psy.png",
     position: "Senior Full-Stack Engineer",
-    duration: "Aug 2020 - Mar 2022",
+    duration: "Mar 2022 - Current",
     responsibilities: [
       "Built web app for trading options that interacts with order books on Solana [Next.js, Recoil, Anchor, Serum, Rust, solana/web3.js, Typescript]",
       "Designed the architechture and built a web app that creates collateralized options airdrops using Merkle trees for verification [React, Recoil, Node, Typescript, PostgreSql, Rust]",
-      "Ported a borrow/lending frontend to React Native in order to support Solana Mobile days after it was released [React Native, Typescript]",
+      "Ported a borrow/lending front-end to React Native in order to support Solana Mobile days after it was released [React Native, Typescript]",
     ],
-    techStack: "React, Redux, Node.js (Hapi), mysql, AWS, socket.io",
+    techStack: "React (recoil), Typescript, Rust, solana",
   },
   {
     company: "OnTraccr",

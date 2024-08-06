@@ -56,12 +56,10 @@ const populateProjects = () => {
                   }
                    
                 <p>
-                <strong>Problem:
-                <br/>
-                 </strong>
+                <strong>Problem:</strong>
                  <br>${project.problem}<br/>
-                  <br/>
-                <strong>Solution: </strong>
+                  <br>
+                <strong>Solution:</strong>
                         <ul>
                             ${project.solution
                               .map((sol) => `<li>${sol}</li>`)
@@ -76,7 +74,7 @@ const populateProjects = () => {
                               .map((val) => `<li>${val}</li>`)
                               .join("")}
                         </ul>
-                    <br/>
+
                 
                     <br/>
 <strong>Tech to make it happen:</strong>

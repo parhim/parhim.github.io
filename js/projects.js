@@ -1,5 +1,31 @@
 const projects = [
   {
+    title: "openhaus.ca",
+    value: [
+      "A commission-free real estate platform facilitating direct property transactions between buyers and sellers",
+      "Facilitated over $25 million in active property listings",
+      "Reduced transaction costs by eliminating realtor commissions",
+    ],
+    problem:
+      "High real estate transaction costs due to realtor commissions and limited control for sellers over the sales process",
+    solution: [
+      "Developed a platform for commission-free real estate transactions",
+      "Implemented live messaging and an intuitive offer/counteroffer flow system with a step-by-step builder",
+      "Integrated scheduling and KYC capabilities for enhanced user experience",
+      "Backend integration with offerland.ca for AI-driven property value estimates",
+    ],
+    techStack: [
+      "React front-end",
+      "Node.js back-end",
+      "AWS EC2, ECR, Amplify, S3, ELB, ElastiCache",
+      "Stripe",
+      "Mapbox",
+      "GitHub workflows",
+    ],
+    link: "https://openhaus.ca",
+    image: "images/projects/openhaus.png",
+  },
+  {
     title: "PsyLend Mobile App",
     value: [
       "Enables instant liquidity by allowing users to borrow against their positions in decentralized option vaults (DOVs)",
@@ -81,10 +107,10 @@ const projects = [
       "Set up socket.io to push updates across logged in users",
     ],
     techStack: [
-      "Node/Express backend",
+      "Node/Express back-end",
       "Socket.io",
       "MySQL DB",
-      "React Frontend",
+      "React front-end",
       "Moment.js/Luxon",
     ],
     link: "https://ontraccr.com/",
