@@ -37,6 +37,7 @@ const projects = [
       "Implemented live messaging and an intuitive offer/counteroffer flow system with a step-by-step builder",
       "Integrated scheduling and KYC capabilities for enhanced user experience",
       "Backend integration with offerland.ca for AI-driven property value estimates",
+      "Automated CI/CD pipeline with GitHub workflows",
     ],
     techStack: [
       "React, recoil",
