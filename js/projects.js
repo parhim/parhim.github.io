@@ -1,5 +1,29 @@
 const projects = [
   {
+    title: "Decentralized Rock-Paper-Scissors",
+    value: [
+      "Provides a trustless, decentralized version of the classic game on Solana",
+      "Ensures fair play by leveraging verifiable proofs for transparent gameplay",
+      "Enhances user experience with a hot-wallet manager",
+    ],
+    problem:
+      "Traditional Rock-Paper-Scissors games require trust between players, which is challenging to establish in a decentralized setting due to the potential for cheating.",
+    solution: [
+      "Implemented a hashed commitment scheme where players submit hashed choices along with a random seed, ensuring choices remain secret until the reveal phase",
+      "Used a reveal phase where players send proof of their choice by revealing their seed and choice, allowing for verification of fairness",
+      "Developed a hot wallet system to streamline the user experience, enabling transactions without constant wallet prompts for signing",
+    ],
+    techStack: [
+      "Rust, Anchor",
+      "React, typescript",
+      "Tailwind CSS for styling",
+      "Solana/Web3.js for blockchain interactions",
+    ],
+    link: "https://rockps.parhim.dev",
+    image: "images/projects/rps.png",
+  },
+
+  {
     title: "openhaus.ca",
     value: [
       "A commission-free real estate platform facilitating direct property transactions between buyers and sellers",
