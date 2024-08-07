@@ -39,8 +39,9 @@ const projects = [
       "Backend integration with offerland.ca for AI-driven property value estimates",
     ],
     techStack: [
-      "React front-end",
-      "Node.js back-end",
+      "React, recoil",
+      "Node.js, PostgreSQL",
+      "Docker",
       "AWS EC2, ECR, Amplify, S3, ELB, ElastiCache",
       "Stripe",
       "Mapbox",
