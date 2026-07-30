@@ -1,0 +1,18 @@
+{
+  "name": "parhim",
+  "private": true,
+  "version": "2.0.0",
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "dev": "bun run --filter parhim-portfolio dev",
+    "build": "bun run --filter parhim-portfolio build",
+    "preview": "bun run --filter parhim-portfolio preview",
+    "test": "bun run --filter parhim-portfolio test",
+    "test:a11y": "bun run --filter parhim-portfolio test:a11y",
+    "lint": "bun run --filter parhim-portfolio lint",
+    "typecheck": "bun run --filter parhim-portfolio typecheck",
+    "format": "bun run --filter parhim-portfolio format",
+    "format:check": "bun run --filter parhim-portfolio format:check",
+    "ci": "bun run --filter parhim-portfolio ci"
+  }
+}

@@ -1,0 +1,180 @@
+.footer {
+  padding-block: var(--space-8) var(--space-7);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-muted);
+}
+
+.panel {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.stack {
+  display: grid;
+  gap: var(--space-4);
+  max-width: var(--prose-width);
+}
+
+.stack > .section-label {
+  margin: 0;
+}
+
+.stack > h2 {
+  margin: 0;
+}
+
+.lead {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.lookingFor {
+  margin: var(--space-2) 0 0;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+
+.lookingForTitle {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 620;
+  color: var(--color-text);
+}
+
+.lookingFor p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-1) 0 0;
+}
+
+.social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.social > li {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.social > li + li {
+  margin-top: 0;
+}
+
+.social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: var(--control-height);
+  font-weight: 520;
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition:
+    color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.socialIcon {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.btnIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.social a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .social a:hover {
+    transform: translateY(var(--lift-sm));
+  }
+}
+
+.education {
+  max-width: var(--prose-width);
+  margin: 0;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.eduItem {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.eduLogo {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+.eduInstitution {
+  margin: 0 0 var(--space-1);
+  font-weight: 560;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.eduInstitution a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.eduInstitution a:hover {
+  color: var(--color-accent);
+}
+
+.eduDegree {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.copy {
+  margin: 0;
+  padding-top: var(--space-2);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-block: var(--space-9) var(--space-8);
+  }
+
+  .panel {
+    gap: var(--space-7);
+  }
+}

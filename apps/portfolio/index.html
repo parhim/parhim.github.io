@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sam Parhimchik — Hands on Engineering Manager</title>
+    <meta
+      name="description"
+      content="Hands on engineering manager with a senior product engineering background in fintech, blockchain infrastructure, developer tooling, and AI enabled delivery."
+    />
+    <link rel="canonical" href="https://parhim.dev/" />
+    <meta name="author" content="Sam Parhimchik" />
+    <meta name="theme-color" content="#1a4f48" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f1413" media="(prefers-color-scheme: dark)" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://parhim.dev/" />
+    <meta property="og:title" content="Sam Parhimchik — Hands on Engineering Manager" />
+    <meta
+      property="og:description"
+      content="Hands on engineering manager with a senior product engineering background in fintech, blockchain infrastructure, developer tooling, and AI enabled delivery."
+    />
+    <meta property="og:image" content="https://parhim.dev/og-image.png" />
+    <meta property="og:site_name" content="parhim.dev" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sam Parhimchik — Hands on Engineering Manager" />
+    <meta
+      name="twitter:description"
+      content="Hands on engineering manager with a senior product engineering background in fintech, blockchain infrastructure, developer tooling, and AI enabled delivery."
+    />
+    <meta name="twitter:image" content="https://parhim.dev/og-image.png" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sam Parhimchik",
+        "url": "https://parhim.dev/",
+        "image": "https://parhim.dev/images/me.png",
+        "email": "mailto:s@parhim.dev",
+        "jobTitle": "Engineering Manager",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Orca",
+          "url": "https://www.orca.so"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Los Angeles",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://github.com/parhim/",
+          "https://www.linkedin.com/in/sam-parhimchik-b4a88a106/"
+        ],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "The University of British Columbia"
+        },
+        "description": "Hands on engineering manager with a senior product engineering background in fintech, blockchain infrastructure, developer tooling, and AI enabled delivery."
+      }
+    </script>
+
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("parhim-theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
